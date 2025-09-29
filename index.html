@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmund Bogen - Luxury Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Edmund Bogen Name - Prominent -->
+            <div class="author-section">
+                <a href="https://bogenhomes.com/agents/edmund-bogen/" target="_blank" rel="noopener noreferrer" class="author-link">
+                    <h1 class="author-name">EDMUND BOGEN</h1>
+                    <p class="author-subtitle">Click to View Full Bio →</p>
+                </a>
+            </div>
+
+            <div class="title-section">
+                <h2 class="main-title">Luxury Mortgage Calculator</h2>
+                <div class="title-divider"></div>
+            </div>
+            <p class="tagline">Plan Your Investment in Paradise</p>
+
+            <!-- Mortgage Partner Credit -->
+            <div class="partner-section">
+                <p class="partner-intro">This Mortgage Calculator is brought to you by my mortgage partner</p>
+                <h3 class="partner-name">Cliff Bernstein</h3>
+                <p class="partner-company">Fairway Independent Mortgage Corporation</p>
+                <a href="https://www.fairway.com/lo/cliff-bernstein-7853" target="_blank" rel="noopener noreferrer" class="partner-button">
+                    Connect with Cliff Bernstein
+                </a>
+            </div>
+        </header>
+
+        <div class="calculator-grid">
+            <!-- Input Section -->
+            <div class="input-section">
+                <h3 class="section-title">📊 Property Details</h3>
+
+                <!-- Home Price -->
+                <div class="input-group">
+                    <label for="homePrice">Home Price</label>
+                    <input type="number" id="homePriceInput" value="1000000" min="100000" max="20000000" step="50000">
+                    <input type="range" id="homePriceSlider" min="100000" max="20000000" step="50000" value="1000000">
+                    <div class="value-display blue">$<span id="homePriceDisplay">1,000,000</span></div>
+                </div>
+
+                <!-- Down Payment -->
+                <div class="input-group">
+                    <label for="downPayment">Down Payment <span class="percentage-display green">(<span id="downPaymentPercent">20.0</span>%)</span></label>
+                    <input type="number" id="downPaymentInput" value="200000" min="0" max="1000000" step="10000">
+                    <input type="range" id="downPaymentSlider" min="0" max="1000000" step="10000" value="200000">
+                    <div class="value-display green">$<span id="downPaymentDisplay">200,000</span></div>
+                </div>
+
+                <!-- Interest Rate -->
+                <div class="input-group">
+                    <label for="interestRate">Interest Rate (%)</label>
+                    <input type="number" id="interestRateInput" value="6.5" min="2" max="12" step="0.1">
+                    <input type="range" id="interestRateSlider" min="2" max="12" step="0.1" value="6.5">
+                    <div class="value-display purple"><span id="interestRateDisplay">6.5</span>%</div>
+                </div>
+
+                <!-- Loan Term -->
+                <div class="input-group">
+                    <label>Loan Term (Years)</label>
+                    <div class="term-buttons">
+                        <button class="term-button" data-term="15">15 Years</button>
+                        <button class="term-button" data-term="20">20 Years</button>
+                        <button class="term-button active" data-term="30">30 Years</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <h3 class="section-title">💰 Your Investment</h3>
+
+                <!-- Monthly Payment - Featured -->
+                <div class="monthly-payment-card">
+                    <div class="result-label">Monthly Payment</div>
+                    <div class="monthly-payment-amount">$<span id="monthlyPayment">5,058</span></div>
+                    <div class="result-subtitle">Principal & Interest</div>
+                </div>
+
+                <!-- Other Details -->
+                <div class="result-details">
+                    <div class="result-card green-card">
+                        <div class="result-label">Loan Amount</div>
+                        <div class="result-value">$<span id="loanAmount">800,000</span></div>
+                    </div>
+
+                    <div class="result-card orange-card">
+                        <div class="result-label">Total Interest Paid</div>
+                        <div class="result-value">$<span id="totalInterest">1,020,945</span></div>
+                    </div>
+
+                    <div class="result-card purple-card">
+                        <div class="result-label">Total Amount Paid</div>
+                        <div class="result-value">$<span id="totalPayment">1,820,945</span></div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta-section">
+                    <p class="cta-text">Ready to make your South Florida dream home a reality?</p>
+                    <button class="cta-button">Schedule Your Consultation with Edmund</button>
+                    <p class="cta-subtitle">
+                        Get pre-qualified with
+                        <a href="https://www.fairway.com/lo/cliff-bernstein-7853" target="_blank" rel="noopener noreferrer" class="partner-link">
+                            Cliff Bernstein
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>This calculator provides estimates only. Actual payments may vary based on taxes, insurance, HOA fees, and other factors.</p>
+            <p class="footer-highlight">Contact Edmund Bogen for personalized real estate guidance and luxury property expertise.</p>
+            <p class="footer-muted">Mortgage services provided by Cliff Bernstein at Fairway Independent Mortgage Corporation.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

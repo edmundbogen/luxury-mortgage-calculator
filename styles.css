@@ -1,0 +1,498 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1e3a8a 50%, #000000 100%);
+    min-height: 100vh;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.author-section {
+    margin-bottom: 1.5rem;
+}
+
+.author-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.author-link:hover {
+    transform: scale(1.05);
+}
+
+.author-name {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #ffffff, #93c5fd, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 20px rgba(65, 105, 225, 0.4);
+    transition: all 0.3s ease;
+}
+
+.author-link:hover .author-name {
+    background: linear-gradient(90deg, #93c5fd, #ffffff, #93c5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.author-subtitle {
+    color: #60a5fa;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.author-link:hover .author-subtitle {
+    color: #93c5fd;
+}
+
+.title-section {
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-family: Georgia, serif;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #60a5fa, #3b82f6, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-divider {
+    height: 4px;
+    width: 8rem;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+
+/* Partner Section */
+.partner-section {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(59, 130, 246, 0.4);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.2);
+}
+
+.partner-intro {
+    color: #d1d5db;
+    margin-bottom: 0.75rem;
+}
+
+.partner-name {
+    font-size: 1.5rem;
+    font-family: Georgia, serif;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+}
+
+.partner-company {
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+}
+
+.partner-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+}
+
+.partner-button:hover {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* Calculator Grid */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Input Section */
+.input-section,
+.results-section {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 16px 48px rgba(30, 58, 138, 0.3);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-family: Georgia, serif;
+    color: #60a5fa;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    color: #e5e7eb;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.percentage-display {
+    font-weight: normal;
+}
+
+.green {
+    color: #10b981;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.4);
+}
+
+.input-group input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Range Slider Styles */
+input[type="range"]::-webkit-slider-track {
+    width: 100%;
+    height: 6px;
+    background: rgba(59, 130, 246, 0.3);
+    border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background: rgba(59, 130, 246, 0.3);
+    border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
+}
+
+.value-display {
+    text-align: right;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    font-size: 1.125rem;
+}
+
+.value-display.blue {
+    color: #60a5fa;
+}
+
+.value-display.green {
+    color: #10b981;
+}
+
+.value-display.purple {
+    color: #a78bfa;
+}
+
+/* Term Buttons */
+.term-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.term-button {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    color: #e5e7eb;
+}
+
+.term-button:hover {
+    border-color: #06b6d4;
+    transform: scale(1.05);
+}
+
+.term-button.active {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.5);
+}
+
+/* Results Section */
+.monthly-payment-card {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(59, 130, 246, 0.2));
+    border: 2px solid #60a5fa;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.result-label {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.monthly-payment-amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+}
+
+.result-subtitle {
+    color: #d1d5db;
+    font-size: 0.875rem;
+}
+
+/* Result Details */
+.result-details {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.result-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+}
+
+.green-card {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(0, 0, 0, 0.5));
+    border-color: rgba(16, 185, 129, 0.4);
+}
+
+.green-card:hover {
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+}
+
+.orange-card {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.3), rgba(0, 0, 0, 0.5));
+    border-color: rgba(251, 146, 60, 0.4);
+}
+
+.orange-card:hover {
+    box-shadow: 0 8px 20px rgba(251, 146, 60, 0.2);
+}
+
+.purple-card {
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.3), rgba(0, 0, 0, 0.5));
+    border-color: rgba(167, 139, 250, 0.4);
+}
+
+.purple-card:hover {
+    box-shadow: 0 8px 20px rgba(167, 139, 250, 0.2);
+}
+
+.result-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.green-card .result-value {
+    color: #10b981;
+}
+
+.orange-card .result-value {
+    color: #fb923c;
+}
+
+.purple-card .result-value {
+    color: #a78bfa;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(6, 182, 212, 0.3));
+    border: 2px solid rgba(59, 130, 246, 0.4);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+}
+
+.cta-text {
+    color: #e5e7eb;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    width: 100%;
+    background: linear-gradient(90deg, #2563eb, #3b82f6, #06b6d4);
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.5);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #3b82f6, #06b6d4, #60a5fa);
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.6);
+}
+
+.cta-subtitle {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    text-align: center;
+}
+
+.partner-link {
+    color: #60a5fa;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.partner-link:hover {
+    color: #93c5fd;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-highlight {
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.footer-muted {
+    color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .author-name {
+        font-size: 2.5rem;
+    }
+
+    .main-title {
+        font-size: 1.875rem;
+    }
+
+    .calculator-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .term-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .monthly-payment-amount {
+        font-size: 2.5rem;
+    }
+}
