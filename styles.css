@@ -26,8 +26,37 @@ body {
     padding-top: 2rem;
 }
 
-.author-section {
-    margin-bottom: 1.5rem;
+/* Author Hero Section with Photo */
+.author-hero {
+    margin-bottom: 2rem;
+}
+
+.author-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(0, 0, 0, 0.4));
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.author-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid rgba(59, 130, 246, 0.5);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+}
+
+.author-info {
+    text-align: left;
 }
 
 .author-link {
@@ -37,11 +66,11 @@ body {
 }
 
 .author-link:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .author-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     background: linear-gradient(90deg, #ffffff, #93c5fd, #ffffff);
@@ -60,15 +89,22 @@ body {
 }
 
 .author-subtitle {
+    color: #93c5fd;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.author-cta {
     color: #60a5fa;
     font-size: 0.875rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.author-link:hover .author-subtitle {
+.author-link:hover .author-cta {
     color: #93c5fd;
 }
 
@@ -475,8 +511,35 @@ input[type="range"]::-moz-range-thumb {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Author section mobile */
+    .author-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .author-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .author-info {
+        text-align: center;
+    }
+
     .author-name {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .author-subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .author-cta {
+        text-align: center;
+        display: block;
     }
 
     .main-title {
@@ -494,5 +557,39 @@ input[type="range"]::-moz-range-thumb {
 
     .monthly-payment-amount {
         font-size: 2.5rem;
+    }
+
+    /* Adjust padding for mobile */
+    .container {
+        padding: 1rem;
+    }
+
+    .header {
+        padding-top: 1rem;
+    }
+
+    .input-section,
+    .results-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .author-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .author-name {
+        font-size: 1.75rem;
+    }
+
+    .monthly-payment-amount {
+        font-size: 2rem;
+    }
+
+    .result-value {
+        font-size: 1.25rem;
     }
 }
